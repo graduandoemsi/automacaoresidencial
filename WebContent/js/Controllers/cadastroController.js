@@ -1,6 +1,5 @@
-//PrincipalApp.controller('cadastroController',['serviceForm', function($scope, serviceForm){
 PrincipalApp.controller('cadastroController', function($scope, serviceForm){
-	$scope.title="Dados Pessoais";
+	$scope.titleCadastro="Cadastro";
 	
 	$scope.salvar = function(pessoa){
 		
@@ -23,7 +22,6 @@ PrincipalApp.controller('cadastroController', function($scope, serviceForm){
 						break;
 					}
 				}
-					
 				console.log(data, status);
 			});
 	};

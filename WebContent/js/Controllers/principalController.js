@@ -1,4 +1,4 @@
-var PrincipalApp = angular.module('PrincipalApp',['ngRoute']);
+var PrincipalApp = angular.module('PrincipalApp',['ngRoute','br.cidades.estados' ]);
 
 PrincipalApp.controller('homeController', function($scope) {
 

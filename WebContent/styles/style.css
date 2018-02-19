@@ -18,15 +18,84 @@
 
 .formulario{
 	padding-top: 20%;
-    padding-right: 35%;
+    padding-right: 30%;
     padding-bottom: 20%;
-    padding-left: 35%;
+    padding-left: 30%;
 }	
 
 .cadastro{
 	padding-top: 15%;
-    padding-right: 30%;
+    padding-right: 26%;
     padding-bottom: 15%;
-    padding-left: 30%;
+    padding-left: 26%;
 }
-
+.tamanhoStringNomeEmail{
+	/*
+	min-width: 378px;
+	max-width: 378px;
+	*/
+	min-width: 48%;
+	max-width: 48%;	
+}
+.tamanhoStringLoginLogradouro{
+	/*
+	min-width: 350px;
+	max-width: 350px;
+	*/
+	min-width: 45%;
+	max-width: 45%;	
+}
+.tamanhoStringBairroCidade{
+	/*
+	min-width: 295px;
+	max-width: 295px;	
+	*/
+	min-width: 37%;
+	max-width: 37%;
+}
+.tamanhoDocCPF{
+	/*
+	min-width: 147px;
+	max-width: 147px;
+	*/
+	min-width: 21%;
+	max-width: 21%;
+}
+.tamanhoComplementoSenhaCelularTelefoneRG{
+	/*
+	min-width: 157px;
+	max-width: 157px;
+	*/
+	min-width: 22%;
+	max-width: 22%;	
+}
+.tamanhoDocNumero{
+	/*
+	min-width: 100px;
+	max-width: 100px;
+	*/	
+	min-width: 15%;
+	max-width: 15%;	
+}
+.tamanhoDocCEP{
+	/*
+	min-width: 90px;
+	max-width: 90px;
+	*/	
+	min-width: 11%;
+	max-width: 11%;	
+}
+.tamanhoDocEstado{
+	/*
+	min-width: 60px;
+	max-width: 60px;
+	*/	
+	min-width: 7%;
+	max-width: 7%;	
+}
+.campoNome{
+	padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}

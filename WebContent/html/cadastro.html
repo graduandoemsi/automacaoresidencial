@@ -1,40 +1,126 @@
 
-		<div class="cadastro">
+		<div class="cadastro" >
+			
+			
+			<form name="form" id="formCadastroUsuario"  data-toggle="validator" role="form">
+				<fieldset> 
+				<div>
+					<div><h1>{{titleCadastro}}</h1></div>
+					<div class="form-group">
+						<label for="textNome" class="control-label  campoNome">Nome</label> 
+						<input class="tamanhoStringNomeEmail" id="textNome" ng-model="pessoa.nome" class="form-control" placeholder="Digite seu Nome..." type="text" required>
+					<!-- </div>
+					<div class="form-group"> -->
+						<label for="textCPF" class="control-label campoNome">CPF</label>
+						<input class="tamanhoDocCPF" id="textCPF" ng-model="pessoa.cpf" class="form-control" placeholder="Digite seu CPF..." type="text" required>
+					</div>
+					<div class="form-group">
+						<label for="textRG" class="control-label campoNome">RG</label> 
+						<input class="tamanhoComplementoSenhaCelularTelefoneRG" id="textRG" ng-model="pessoa.rg" class="form-control" placeholder="Digite seu RG..." type="text" required>
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label name="texEmail" class="control-label campoNome">Email</label>
+						<input class="tamanhoStringNomeEmail" id="textEmail" ng-model="pessoa.email" class="form-control" placeholder="Digite seu E-mail" type="email" required>
+						    <div ng-show="form.$submitted || form.uEmail.$touched">
+								<span ng-show="form.uEmail.$error.required">Email é necessário</span>
+								<span ng-show="form.uEmail.$error.email">Este não é um email válido.</span>
+						    </div>	
+					</div>
+					<div class="form-group">
+						<label for="texTelefone" class="control-label campoNome">Telefone</label>
+						<input class="tamanhoComplementoSenhaCelularTelefoneRG" id="textTelefone" ng-model="pessoa.telefone" class="form-control" placeholder="Digite seu Telefone..." type="text">
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label for="texCelular" class="control-label campoNome">Celular</label>						
+						<input class="tamanhoComplementoSenhaCelularTelefoneRG" id="textCelular" ng-model="pessoa.celular" class="form-control" placeholder="Digite seu Celular..." type="text" required>
+					</div>
 		
-			<form id="formCadastroUsuario"  data-toggle="validator" role="form">
-				<div><h1>{{title}}</h1></div>
-				<div class="form-group">
-					<label for="textNome" class="control-label">Nome</label> 
-					<input id="textNome" ng-model="pessoa.nome" class="form-control" placeholder="Digite seu Nome..." type="text" required>
 				</div>
-				<div class="form-group">
-					<label for="textCPF" class="control-label">CPF</label>
-					<input id="textCPF" ng-model="pessoa.cpf" class="form-control" placeholder="Digite seu CPF..." type="text" required>
+				<div>
+					<div><h1>{{titleCadastroLogin}}</h1></div>
+					<div class="form-group">
+						<label for="textLogin" class="control-label campoNome">Login</label> 
+						<input class="tamanhoStringLoginLogradouro" id="textLogin" ng-model="login.login" class="form-control" placeholder="Digite seu Nome de Login..." type="text" required>
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label for="textSenha" class="control-label campoNome">Senha</label>
+						<input class="tamanhoComplementoSenhaCelularTelefoneRG" id="textSenha" ng-model="login.senha" class="form-control" placeholder="Digite uma Senha..." type="password" required>
+					</div>			
 				</div>
-				<div class="form-group">
-					<label for="textRG" class="control-label">RG</label> 
-					<input id="textRG" ng-model="pessoa.rg" class="form-control" placeholder="Digite seu RG..." type="text" required>
-				</div>
-				<div class="form-group">
-					<label name="texEmail" class="control-label">Email</label>
-					<input id="textEmail" ng-model="pessoa.email" class="form-control" placeholder="Digite seu E-mail" type="email" required>
-					    <div ng-show="form.$submitted || form.uEmail.$touched">
-							<span ng-show="form.uEmail.$error.required">Email é necessário</span>
-							<span ng-show="form.uEmail.$error.email">Este não é um email válido.</span>
-					    </div>	
-				</div>
-				<div class="form-group">
-					<label for="texTelefone" class="control-label">Telefone</label>
-					<input id="textTelefone" ng-model="pessoa.telefone" class="form-control" placeholder="Digite seu Telefone..." type="text">
-				</div>
-				<div class="form-group">
-					<label for="texCelular" class="control-label">Celular</label>
-					<input id="textCelular" ng-model="pessoa.celular" class="form-control" placeholder="Digite seu Celular..." type="text" required>
-				</div>
-				<button type="submit" ng-click="salvar(pessoa)" ng-disabled="form.$invalid" class="btn btn-primary">Salvar</button>
 				
-				{{mensagem}}
+				<div>
+					<div><h1>{{titleForEndereco}}</h1></div>
+					<div class="form-group">
+						<label for="textLogradouro" class="control-label  campoNome">Logradouro</label> 
+						<input class="tamanhoStringLoginLogradouro" id="textLogradouro" ng-model="endereco.rua" class="form-control" placeholder="Digite seu Logradouro..." type="text" required>
+					<!-- </div>
+					<div class="form-group"> -->
+						<label for="textNumero" class="control-label campoNome">Número</label>
+						<input class="tamanhoDocNumero" id="textNumero" ng-model="endereco.numero" class="form-control" placeholder="Digite o Número da Residência..." type="text" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="textComplemento" class="control-label campoNome">Complemento</label>
+						<input class="tamanhoComplementoSenhaCelularTelefoneRG" id="textComplemento" ng-model="endereco.complemento" class="form-control" placeholder="Digite o Complemento se Houver" type="text" required>					
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label for="textBairro" class="control-label campoNome">Bairro</label> 
+						<input class="tamanhoStringBairroCidade" id="textBairro" ng-model="endereco.bairro" class="form-control" placeholder="Digite seu Bairro..." type="text" required>	
+					</div>
+					<div class="form-group">
+						<label for="texCEP" class="control-label campoNome">CEP</label>
+						<input class="tamanhoDocCEP" id="textCEP" ng-model="endereco.cep" class="form-control" placeholder="Digite seu CEP..." type="text">
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label for="texCidade" class="control-label campoNome">Cidade</label>
+						<input class="tamanhoStringBairroCidade" id="textCidade" ng-model="endereco.cidade" class="form-control" placeholder="Digite o Nome da Cidade..." type="text" required>
+					<!--
+					</div>
+					<div class="form-group">-->
+						<label for="texEstado" class="control-label campoNome">Estado</label>
+						<input class="tamanhoDocEstado" id="textEstado" ng-model="endereco.estado" class="form-control" placeholder="Digite seu Estado..." type="text">
+					</div>		
+				</div>				
+				<!--
+				<div>
+                	<!-- <form name="demo"> --				
+						<section id="mask" ng-controller="CidadeEstadoController as vm">
+	                    	<div><h1>{{titleForEndereco}}</h1></div>
+	                        <div class="form-group">
+	                                <!--  {{selectedState}}--
+	                                <select id="select-state" ng-model="selectedState" ng-change="vm.buscarCidadesPorSigla(selectedState)" class="form-control">
+	                                    <option value="" >Escolha um Estado</option>
+	                                    <option ng-repeat="state in vm.states" ng-value="state.sigla" >
+	                                        {{state.nome}}
+	                                    </option>
+	                                </select>
+	                        </div>
+	                        <div class="form-group">
+	                                <select id="select-city" ng-model="selectedCity" class="form-control">
+	                                    <option value="">Escolha uma Cidade</option>
+	                                    <option ng-repeat="city in vm.cities" ng-value="city">
+	                                        {{city}}
+	                                    </option>
+	                                </select>    
+	                         </div>
+	                     </section>
+	                     <button type="submit" ng-click="salva(state.name, city)" ng-disabled="form.$invalid" class="btn btn-primary">Salva</button>
+					<!-- </form> --
+				</div>
+				 -->
+					<button type="submit" ng-click="salvar(pessoa)" ng-disabled="form.$invalid" class="btn btn-primary">Salvar</button>
+					<button type="submit" ng-click=" alterar(pessoa)" ng-disabled="form.$invalid" class="btn btn-primary">Alterar</button>
+					<button type="submit" ng-click="excluir(pessoa)" ng-disabled="form.$invalid" class="btn btn-primary">Excluir</button>										
+					
+					<div>{{mensagem}} </div>
+			</fieldset>				 
 			</form>
+			
 		</div>
 
 
